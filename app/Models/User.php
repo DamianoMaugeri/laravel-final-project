@@ -6,6 +6,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use App\Models\Movie;
 
 class User extends Authenticatable
 {
@@ -43,5 +44,14 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+
+    public function reviews(){
+        return $this->hasMany(Review::class);
+    }
+
+    public function likedMovies(){
+    return $this->belongsToMany(Movie::class, 'likes')->withTimestamps();
     }
 }
