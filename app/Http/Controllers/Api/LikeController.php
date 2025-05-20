@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
+use App\Http\Controllers\Controller;
 use App\Models\Movie;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -24,5 +25,4 @@ class LikeController extends Controller
         
         return redirect()->back()->with('message', $liked ? 'Film aggiunto ai preferiti' : 'Film rimosso dai preferiti');
     }
-
 }

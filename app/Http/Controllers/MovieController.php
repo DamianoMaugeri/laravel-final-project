@@ -49,6 +49,13 @@ class MovieController extends Controller
         // aggiungere controlli per la presenza di video 
        // $newMovie->title=$data['title'];
 
+
+       $newMovie->save();
+
+       //dopo aver salvato
+
+       $newMovie->genres()->attach($data['genres']);
+
        return  redirect()-> route('movies.index');
     }
 

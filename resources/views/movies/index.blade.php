@@ -7,7 +7,7 @@
 
 <div class="row p-4 justify-content-center">
 
-    {{-- <a href={{route('projects.create')}} class=" btn btn-primay col-3 bg-primary text-white ">Aggiungi un nuovo Progetto</a> --}}
+     <a href={{route('movies.create')}} class=" btn btn-primay col-3 bg-primary text-white ">Aggiungi un nuovo film</a>
 
 </div>
 
