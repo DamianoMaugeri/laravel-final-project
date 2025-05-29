@@ -1,14 +1,24 @@
 <?php
 
+use App\Http\Controllers\Api\Auth\LoginController;
+use App\Http\Controllers\Api\Auth\RegisterController;
 use App\Http\Controllers\Api\LikeController;
 use App\Http\Controllers\Api\MovieController;
 use App\Http\Controllers\Api\ReviewController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-// Route::get('/user', function (Request $request) {
-//     return $request->user();
-// })->middleware('auth:sanctum');
+Route::get('/user', function (Request $request) {
+    return $request->user();
+    dd($request);
+ })->middleware('auth:sanctum');
+
+
+// rotta per la registrazione front end
+Route::post('/register', [RegisterController::class, 'register']);
+
+// rotta per il login 
+Route::post('/login', [LoginController::class, 'login']);
 
 //========================== rotte per i film 
 
@@ -40,3 +50,6 @@ Route::middleware([])->group(function () {
 
 //============================== rotte per l'autenticazione 
 
+
+
+require __DIR__.'/auth.php';

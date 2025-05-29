@@ -6,7 +6,7 @@
 
  
 
-    <form action="{{route("movies.update", $movie)}}" method="POST" class="row g-3">
+    <form action="{{route("movies.update", $movie)}}" method="POST"  enctype="multipart/form-data" class="row g-3">
 
         @csrf
         @method('PUT')
@@ -49,6 +49,17 @@
             @endforeach
 
 
+        </div>
+
+        <div class="col-12">
+            <label for="image" class="form-label">Immagine:</label>
+            <input type="file" name="image" id="image">
+
+            @if ($movie->image)
+
+                    <img class="img-fluid w-30" src="{{asset("storage/".$movie->image)}}" alt="{{$movie->title}}">
+
+            @endif
         </div>
 
         <div class="col-12">

@@ -34,35 +34,38 @@ class MovieController extends Controller
 
             // Se l'utente è autenticato, includi likes e suggerimenti
         $likedMovies = null;
-        $recommendedMovies = null;
+        $recommendedMovies = Movie::withCount('likedByUsers')
+        ->orderBy('liked_by_users_count', 'desc')
+        ->limit(10)
+        ->get();
 
     
         // Se l'utente è autenticato
-        if (Auth::check()) {
-            $user = Auth::user();
+        // if (Auth::check()) {
+        //     $user = Auth::user();
     
-            // Film che ha messo tra i preferiti
-            $likedMovies = $user->likedMovies()
-            ->withCount('likedByUsers')
-            ->orderByDesc('liked_by_users_count')
-            ->limit(10)
-            ->get();
+        //     // Film che ha messo tra i preferiti
+        //     $likedMovies = $user->likedMovies()
+        //     ->withCount('likedByUsers')
+        //     ->orderByDesc('liked_by_users_count')
+        //     ->limit(10)
+        //     ->get();
     
-            // Esempio banale: film consigliati = film dello stesso genere dei film che ha likato
-            $genreIds = $likedMovies->pluck('genres')->flatten()->pluck('id')->unique();
+        //     // Esempio banale: film consigliati = film dello stesso genere dei film che ha likato
+        //     $genreIds = $likedMovies->pluck('genres')->flatten()->pluck('id')->unique();
     
-            $recommendedMovies = Movie::whereHas('genres', function ($q) use ($genreIds) {
-                $q->whereIn('genres.id', $genreIds);
-            })->whereNotIn('id', $likedMovies->pluck('id')) // escludi quelli già likati
-              ->limit(10)->get();
+        //     $recommendedMovies = Movie::whereHas('genres', function ($q) use ($genreIds) {
+        //         $q->whereIn('genres.id', $genreIds);
+        //     })->whereNotIn('id', $likedMovies->pluck('id')) // escludi quelli già likati
+        //       ->limit(10)->get();
     
-            // return response()->json([
-            //     'success'=> true,
-            //     'movies' => $movies,
-            //     'liked' => $likedMovies,
-            //     'recommended' => $recommendedMovies,
-            // ]);
-        }
+        //     // return response()->json([
+        //     //     'success'=> true,
+        //     //     'movies' => $movies,
+        //     //     'liked' => $likedMovies,
+        //     //     'recommended' => $recommendedMovies,
+        //     // ]);
+        // }
 
         return response()->json([
             'success'=> true,
@@ -82,7 +85,8 @@ class MovieController extends Controller
     public function show(Movie $movie){
 
         
-        $movie->load('genres','likedByUsers', 'reviews');
+        $movie->load('genres','likedByUsers', 'reviews.user')->loadCount('likedByUsers');
+
 
 
 

@@ -6,7 +6,7 @@
 
  
 
-    <form action="{{route("movies.store")}}" method="POST" class="row g-3">
+    <form action="{{route("movies.store")}}" method="POST" enctype="multipart/form-data" class="row g-3">
 
         @csrf
 
@@ -48,6 +48,11 @@
             @endforeach
 
 
+        </div>
+
+        <div class="col-12">
+            <label for="image" class="form-label">Immagine:</label>
+            <input type="file" name="image" id="image">
         </div>
 
         <div class="col-12">

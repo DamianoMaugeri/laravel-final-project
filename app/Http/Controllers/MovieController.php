@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Genre;
 use App\Models\Movie;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class MovieController extends Controller
 {
@@ -42,6 +43,13 @@ class MovieController extends Controller
         $newMovie->description=$data['description'];
         $newMovie->director=$data['director'];
         $newMovie->year=$data['year'];
+        
+        if(array_key_exists("image",$data)){
+            $img_url = Storage::putFile('moviesImages', $data['image']);
+            $newMovie->image = $img_url;
+
+        }
+
 
         // aggiungere controlli per la presenza di immagini 
        // $newMovie->title=$data['title'];
@@ -93,6 +101,16 @@ class MovieController extends Controller
         $movie->director=$data['director'];
         $movie->year=$data['year'];
 
+        if(array_key_exists("image" , $data)){
+
+            Storage::delete($movie->image);
+
+             $img_url = Storage::putFile('moviesImages', $data['image']);
+
+            $movie->image = $img_url;
+
+        }
+
         $movie->update();
 
         if ($request->has('genres')) $movie->genres()->sync($data['genres']);
@@ -101,15 +119,9 @@ class MovieController extends Controller
 
 
 
-
-
-        // if ($request->has('image')) $movie->image = $data['image'];
-
-        // else $movie->technologies()->detach();
-
         // if ($request->has('video')) $movie->video = $data['video'];
 
-        // else $movie->technologies()->detach();
+
 
 
 
@@ -124,6 +136,10 @@ class MovieController extends Controller
     public function destroy(Movie $movie)
     {
         //
+
+        if ($movie->image){
+               Storage::delete($movie->image);
+        }
         $movie->delete();
         return  redirect()-> route('movies.index');
     }
