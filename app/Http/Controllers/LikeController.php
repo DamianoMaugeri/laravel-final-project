@@ -12,7 +12,7 @@ class LikeController extends Controller
     public function toggle(Movie $movie)
     {
         $user = Auth::user();
- 
+   
         
         if ($user->likedMovies()->where('movie_id', $movie->id)->exists()) {
             $user->likedMovies()->detach($movie);

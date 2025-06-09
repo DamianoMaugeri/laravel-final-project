@@ -1,6 +1,6 @@
 @extends('layouts.movies')
 
-@section('title', 'tutti i progetti')
+@section('title', 'Tutti i Film ')
 
 @section('content')
 

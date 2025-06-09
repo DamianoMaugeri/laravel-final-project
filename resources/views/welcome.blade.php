@@ -10,21 +10,27 @@
                 </g>
             </svg>
         </div>
-        <h1 class="display-5 fw-bold">
+        {{-- <h1 class="display-5 fw-bold">
             Welcome to Laravel+Bootstrap <i class="bi bi-box"></i>
+        </h1> --}}
+
+        <h1 class="display-5 fw-bold">
+            Benvenuto in Laravel Movies <i class="bi bi-box"></i>
         </h1>
 
         <p class="col-md-8 fs-4">
-            This is a preset package with Bootstrap 5 views for laravel projects including laravel breeze/blade. It works from laravel 9.x to the latest release 11.x.
-            You can also use bootstrap icons out of the box.
+            Questa applicazione permette la gestione di un archivio di Film con lo scopo di poter essere gestiti da una serie 
+            di utenti autenticati tramite il back-end , ma di essere espoti ad un API front end che ne permette la visualizzazione a tutti.
+            Per poter proseguire effettua il login o nel caso non hai un account registrati.
+
         </p>
-        <a href="https://packagist.org/packages/pacificdev/laravel_9_preset" class="btn btn-primary btn-lg" type="button">Documentation</a>
+        {{-- <a href="https://packagist.org/packages/pacificdev/laravel_9_preset" class="btn btn-primary btn-lg" type="button">Documentation</a> --}}
     </div>
 </div>
 
-<div class="content">
+{{-- <div class="content">
     <div class="container">
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora temporibus, dicta nemo aliquam totam nisi deserunt soluta quas voluptatum ab beatae praesentium necessitatibus minus, facilis illum rerum officiis accusamus dolores!</p>
     </div>
-</div>
+</div> --}}
 @endsection

@@ -53,6 +53,10 @@ class User extends Authenticatable
     }
 
     public function likedMovies(){
-    return $this->belongsToMany(Movie::class, 'likes')->withTimestamps();
+    return $this->belongsToMany(Movie::class, 'likes', 'user_id', 'movie_id' )->withTimestamps();
     }
+
+    // public function likes(){
+    // return $this->belongsToMany(Movie::class, 'likes')->withTimestamps();
+    // }
 }
