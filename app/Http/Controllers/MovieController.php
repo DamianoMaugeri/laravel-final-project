@@ -61,8 +61,9 @@ class MovieController extends Controller
        $newMovie->save();
 
        //dopo aver salvato
+       if ($request->has('genres')) $newMovie->genres()->attach($data['genres']);
 
-       $newMovie->genres()->attach($data['genres']);
+      // $newMovie->genres()->attach($data['genres']);
 
        return  redirect()-> route('movies.index');
     }
@@ -115,17 +116,11 @@ class MovieController extends Controller
 
         if ($request->has('genres')) $movie->genres()->sync($data['genres']);
 
-        else $movie->technologies()->detach();
+        else $movie->genres()->detach();
 
 
 
-        // if ($request->has('video')) $movie->video = $data['video'];
-
-
-
-
-
-        return  redirect()-> route('movies.index');
+        return  redirect()-> route('movies.show', $movie);
 
 
     }

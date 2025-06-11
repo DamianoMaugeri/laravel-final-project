@@ -57,7 +57,7 @@
 
             @if ($movie->image)
 
-                    <img class="img-fluid w-30" src="{{asset("storage/".$movie->image)}}" alt="{{$movie->title}}">
+                    <img class="img-fluid" src="{{asset("storage/".$movie->image)}}" alt="{{$movie->title}}" style="width: 75px;">
 
             @endif
         </div>

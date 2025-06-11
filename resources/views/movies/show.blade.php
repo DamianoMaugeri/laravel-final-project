@@ -72,7 +72,7 @@
         
     <div class="col-6 text-center">
         <figure>
-            <img src="{{asset("storage/".$movie->image)}}" alt="{{$movie->title}}">
+            <img src="{{asset("storage/".$movie->image)}}" alt="{{$movie->title}}" style="width: 300px; height: auto;">
         </figure>
     </div>
     @endif

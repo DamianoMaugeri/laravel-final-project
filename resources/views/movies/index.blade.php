@@ -13,11 +13,11 @@
 
 
 
-<div class="row row-gap-4">
+<div class="row row-gap-4 my-5">
 
 
     @foreach ($movies as $movie)
-    <div class="col-4">
+    <div class="col-4 ">
         <a href="{{ route('movies.show', $movie) }}" class="text-decoration-none text-reset">
             <div class="card py-3">
                 <div class="card-title text-center">

@@ -26,6 +26,10 @@ Route::get('movies',[MovieController::class, 'index']);
 
 Route::get('movies/{movie}',[MovieController::class, 'show']);
 
+
+
+
+
 // Route::get('movies/{movie}/stream',[MovieController::class, 'stream']);
 
 
