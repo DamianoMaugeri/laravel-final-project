@@ -1,4 +1,4 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<!-- <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
 <a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
@@ -63,4 +63,68 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT). -->
+
+
+# 🎬 Progetto Laravel + React
+
+## 📖 Consegna
+L’obiettivo di questo progetto è realizzare un’applicazione completa composta da:
+- Un **backoffice in Laravel** con autenticazione tramite Laravel Breeze, per la gestione CRUD di un’entità scelta (es. Film, Videogiochi, Album, ecc.) con almeno una relazione con un’altra entità.
+- Un **frontend in React** accessibile agli utenti guest, che permette di:
+  - Visualizzare la lista degli elementi
+  - Consultare i dettagli di un singolo elemento
+  - Mostrare le informazioni collegate tramite relazione (es. generi, categorie, console)
+
+Il backend espone un set di **API REST**, consumate dal frontend tramite chiamate AJAX.
+
+---
+
+## 🛠️ Scelte progettuali
+Per lo sviluppo del progetto ho scelto di lavorare sull’entità **Movies** 🎬, con la seguente struttura:
+- **Movies** → contiene titolo, descrizione,regista, immagine di copertina, anno di uscita  
+- **Genres** → relazione *many-to-many* con i film (un film può avere più generi, un genere può appartenere a più film)
+- **Reviews** → relazione *one-to-many* con i film (un film può avere più recensioni, una recensione può appartenere ad un film) → relazione *one-to-many* con i gli users(un user può avere più recensioni, una recensione può appartenere ad un solo user)
+- **Likes** → relazione *many-to-many* con i tra movies e users (tabella pivot)
+
+### Motivazioni
+- L’entità *Movies* è semplice ma realistica, perfetta per mostrare CRUD e relazioni.  
+- La relazione *Film ↔ Generi* permette di gestire tag multipli e di avere un frontend più interessante.  
+- L’uso di **Laravel Breeze** ha semplificato l’implementazione dell’autenticazione e gestione utenti.  
+- **React** è stato scelto per il frontend per creare un’interfaccia moderna, dinamica e facilmente estendibile.
+
+---
+
+## ⚙️ Tecnologie utilizzate
+### Backend
+- [Laravel 10](https://laravel.com/) → framework backend
+- [Laravel Breeze](https://laravel.com/docs/breeze) → autenticazione
+- [MySQL](https://www.mysql.com/) → database relazionale
+- [Eloquent ORM](https://laravel.com/docs/eloquent) → gestione modelli e relazioni
+- [Blade](https://laravel.com/docs/blade) → interfaccia backoffice
+
+### Frontend
+- [React](https://react.dev/) → UI dinamica
+- [React Router](https://reactrouter.com/) → navigazione client-side
+- [Axios](https://axios-http.com/) → chiamate API
+- [Bootstrap](https://getbootstrap.com/) → layout e componenti
+
+---
+
+## 📸 Screenshot
+
+### Login
+![Login](./docs/screenshots/cattura9.jpg)
+
+### Dashboard (Backoffice)
+![Dashboard](./docs/screenshots/cattura6.jpg)
+
+### Lista Film (Frontend React)
+![Lista Film](./docs/screenshots/cattura7.jpg)
+
+### Dettaglio Film con Generi
+![Dettaglio Film](./docs/screenshots/cattura2.jpg)
+
+---
+
+

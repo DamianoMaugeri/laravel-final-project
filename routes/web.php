@@ -21,6 +21,11 @@ Route::middleware('auth')->group(function () {
 });
 
 
+Route::get('/esercizio', function(){
+return view('esercizio') ;
+});
+
+
 Route::resource("movies", MovieController::class)
 ->middleware(['auth','verified']);
 
