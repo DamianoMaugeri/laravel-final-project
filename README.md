@@ -97,7 +97,7 @@ Per lo sviluppo del progetto ho scelto di lavorare sull’entità **Movies** �
 
 ## ⚙️ Tecnologie utilizzate
 ### Backend
-- [Laravel 10](https://laravel.com/) → framework backend
+- [Laravel 11](https://laravel.com/) → framework backend
 - [Laravel Breeze](https://laravel.com/docs/breeze) → autenticazione
 - [MySQL](https://www.mysql.com/) → database relazionale
 - [Eloquent ORM](https://laravel.com/docs/eloquent) → gestione modelli e relazioni
