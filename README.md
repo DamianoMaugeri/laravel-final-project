@@ -114,7 +114,7 @@ Per lo sviluppo del progetto ho scelto di lavorare sull’entità **Movies** �
 ## 📸 Screenshot
 
 ### Login
-![Login](./docs/screenshots/Cattura9.jpg)
+![Login](./docs/screenshots/Cattura9.JPG)
 
 ### Dashboard (Backoffice)
 ![Dashboard](./docs/screenshots/Cattura6.jpg)
