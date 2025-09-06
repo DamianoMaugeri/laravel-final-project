@@ -114,16 +114,16 @@ Per lo sviluppo del progetto ho scelto di lavorare sull’entità **Movies** �
 ## 📸 Screenshot
 
 ### Login
-![Login](./docs/screenshots/cattura9.jpg)
+![Login](./docs/screenshots/Cattura9.jpg)
 
 ### Dashboard (Backoffice)
-![Dashboard](./docs/screenshots/cattura6.jpg)
+![Dashboard](./docs/screenshots/Cattura6.jpg)
 
 ### Lista Film (Frontend React)
-![Lista Film](./docs/screenshots/cattura7.jpg)
+![Lista Film](./docs/screenshots/Cattura7.jpg)
 
 ### Dettaglio Film con Generi
-![Dettaglio Film](./docs/screenshots/cattura2.jpg)
+![Dettaglio Film](./docs/screenshots/Cattura2.jpg)
 
 ---
 
