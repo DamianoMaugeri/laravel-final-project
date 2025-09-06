@@ -102,6 +102,8 @@ Per lo sviluppo del progetto ho scelto di lavorare sull’entità **Movies** �
 - [MySQL](https://www.mysql.com/) → database relazionale
 - [Eloquent ORM](https://laravel.com/docs/eloquent) → gestione modelli e relazioni
 - [Blade](https://laravel.com/docs/blade) → interfaccia backoffice
+- [Bootstrap](https://getbootstrap.com/) → layout e componenti
+
 
 ### Frontend
 - [React](https://react.dev/) → UI dinamica
@@ -113,17 +115,38 @@ Per lo sviluppo del progetto ho scelto di lavorare sull’entità **Movies** �
 
 ## 📸 Screenshot
 
-### Login
+### Pagina iniziale
+- **Autenticazione necessaria** il Back office del progetto è protetto da autenticazone , solo gli utenti registrati possono accedere 
 ![Login](./docs/screenshots/Cattura9.JPG)
 
-### Dashboard (Backoffice)
-![Dashboard](./docs/screenshots/Cattura6.jpg)
+### Pagina principale (movies.index)
+- Nella pagina principale abbiamo la lista delle risorse Movies e la possibilita di aggiungerne una nuova
+![Index](./docs/screenshots/Cattura.JPG)
 
-### Lista Film (Frontend React)
-![Lista Film](./docs/screenshots/Cattura7.jpg)
+### Pagina di dettaglio  (movies.show)
+- Nella pagina di dettaglio abbiamo la possibilita di vedere tutte le informazioni della risorsa Movies , abbiamo la possibilita di modificare la risorsa (movies.edit) e la possibilità di eliminarla, c'è inoltre un tasto Like che funzione come toggle 
+![Show ](./docs/screenshots/Cattura3.JPG)
 
-### Dettaglio Film con Generi
-![Dettaglio Film](./docs/screenshots/Cattura2.jpg)
+### Reviews
+- All'interno della nostra pagina di dettaglio possiamo lasciare una recensione del film in questione , nella parte più in basso abbiamo la lista di tutte le recensioni presenti, un utente loggato può modificare o eliminare solo le proprie recensioni, essendo presente una policy che gestisce i permessi 
+![Reviews](./docs/screenshots/Cattura4.JPG)
+
+### Front-End 
+-**React** Ho creato un front-end in react che permette a qualsiasi utente (senza autenticazione) di poter visualizzare i Film presenti 
+-**Consigliati e Recenti** Nella pagina principale c'è la possibilità di visualizzare tutti i film , la possibilità di filtrarli per titolo, una lista di film consigliati , ordinati in maniera decrescente per numero di like ed una lista di  film recenti ordinati in ordine decrescente per anno di uscita.
+
+![Home page](./docs/screenshots/Cattura6.JPG)
+![Home page](./docs/screenshots/Cattura7.JPG)
+
+
+### Pagina di dettaglio Front end
+- se clicchiamo su una card di un nostro film possiamo andare nella pagina di dettaglio dove vengono visualizzate tutte le infoormazioni del film
+![Dettaglio Film](./docs/screenshots/Cattura8.JPG)
+
+
+-**Recensioni** All'interno della pagina di dettaglio anche nel Front end C'è la possibilità di vedere le recensioni lasciate dagli utenti 
+![Dettaglio Film](./docs/screenshots/Cattura10.JPG)
+
 
 ---
 
