@@ -124,7 +124,7 @@ Per lo sviluppo del progetto ho scelto di lavorare sull’entità **Movies** �
 ![Index](./docs/screenshots/Cattura.JPG)
 
 ### Pagina di dettaglio  (movies.show)
-- Nella pagina di dettaglio abbiamo la possibilita di vedere tutte le informazioni della risorsa Movies , abbiamo la possibilita di modificare la risorsa (movies.edit) e la possibilità di eliminarla, c'è inoltre un tasto Like che funzione come toggle 
+- Nella pagina di dettaglio abbiamo la possibilita di vedere tutte le informazioni della risorsa Movies , abbiamo la possibilità di modificare la risorsa (movies.edit) e la possibilità di eliminarla, c'è inoltre un tasto Like che funzione come toggle 
 ![Show ](./docs/screenshots/Cattura3.JPG)
 
 ### Reviews
@@ -132,15 +132,15 @@ Per lo sviluppo del progetto ho scelto di lavorare sull’entità **Movies** �
 ![Reviews](./docs/screenshots/Cattura4.JPG)
 
 ### Front-End 
--**React** Ho creato un front-end in react che permette a qualsiasi utente (senza autenticazione) di poter visualizzare i Film presenti 
--**Consigliati e Recenti** Nella pagina principale c'è la possibilità di visualizzare tutti i film , la possibilità di filtrarli per titolo, una lista di film consigliati , ordinati in maniera decrescente per numero di like ed una lista di  film recenti ordinati in ordine decrescente per anno di uscita.
+- **React** Ho creato un front-end in react che permette a qualsiasi utente (senza autenticazione) di poter visualizzare i Film presenti 
+- **Consigliati e Recenti** Nella pagina principale c'è la possibilità di visualizzare tutti i film , la possibilità di filtrarli per titolo, una lista di film consigliati , ordinati in maniera decrescente per numero di like ed una lista di  film recenti ordinati in ordine decrescente per anno di uscita.
 
 ![Home page](./docs/screenshots/Cattura6.JPG)
 ![Home page](./docs/screenshots/Cattura7.JPG)
 
 
 ### Pagina di dettaglio Front end
-- se clicchiamo su una card di un nostro film possiamo andare nella pagina di dettaglio dove vengono visualizzate tutte le infoormazioni del film
+- Se clicchiamo su una card di un nostro film possiamo andare nella pagina di dettaglio dove vengono visualizzate tutte le infoormazioni del film
 ![Dettaglio Film](./docs/screenshots/Cattura8.JPG)
 
 
